@@ -1,5 +1,5 @@
 {
-    "name": "io.github.voyage-vr.quick-toggle.modular-avatar.Editor",
+    "name": "io.github.vr-voyage.quick-toggle.modular-avatar.Editor",
     "rootNamespace": "",
     "references": [
         "VRC.SDK3A",
