@@ -1,0 +1,24 @@
+{
+    "name": "io.github.voyage-vr.quick-toggle.modular-avatar.Editor",
+    "rootNamespace": "",
+    "references": [
+        "VRC.SDK3A",
+        "VRC.SDK3A.Editor",
+        "VRC.SDKBase",
+        "VRC.SDKBase.Editor",
+        "io.github.voyage-vr.quick-toggle.modular-avatar",
+        "nadena.dev.modular-avatar.core",
+        "nadena.dev.modular-avatar.core.editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,18 @@
+{
+  "name": "io.voyagevoyage.voyage-vr.quick-toggle.modular-avatar",
+  "displayName": "Voyage's Quick Toggle : Modular Avatar",
+  "version": "0.0.1",
+  "description": "Quickly create item toggles using Modular Avatar",
+  "gitDependencies": {},
+  "vpmDependencies": {
+    "com.vrchat.avatars": ">=3.7.4",
+    "nadena.dev.modular-avatar": ">=1.10.4"
+  },
+  "author": {
+    "name": "Voyage Voyage",
+    "email": "dontsendmailthere@voyagevoyage.fr",
+    "url": "https://github.com/vr-voyage"
+  },
+  "legacyFolders": {},
+  "legacyFiles": {}
+}
