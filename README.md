@@ -2,6 +2,8 @@
 
 A small script to automate the creation of Individual Toggles with Modular Avatar.
 
+[demo.webm](https://github.com/user-attachments/assets/1af0de38-06d7-4394-b238-686f0ff8bcf5)
+
 # Usage
 
 * Right-click on Avatar items you want to be able to Toggle individually
