@@ -212,8 +212,8 @@ public class VoyageAvatarMAEditorHelpers
         AnimationClip offClip = new AnimationClip { name = $"{stateMachineName}-off", wrapMode = WrapMode.Once };
         AnimationClip onClip = new AnimationClip { name = $"{stateMachineName}-on", wrapMode = WrapMode.Once };
 
-        offClip.SetCurve(itemName, typeof(GameObject), "m_IsActive", AnimationCurve.Constant(0, 1 / 60f, 0));
-        onClip.SetCurve(itemName, typeof(GameObject), "m_IsActive", AnimationCurve.Constant(0, 1 / 60f, 1));
+        offClip.SetCurve("", typeof(GameObject), "m_IsActive", AnimationCurve.Constant(0, 1 / 60f, 0));
+        onClip.SetCurve("", typeof(GameObject), "m_IsActive", AnimationCurve.Constant(0, 1 / 60f, 1));
 
         AssetDatabase.CreateAsset(offClip, $"{generatedAssetsPath}/{offClip.name}-{suffix}.anim");
         AssetDatabase.CreateAsset(onClip, $"{generatedAssetsPath}/{onClip.name}-{suffix}.anim");
@@ -266,17 +266,6 @@ public class VoyageAvatarMAEditorHelpers
         AssetDatabase.Refresh();
 
         return generatedFxController;
-    }
-
-    [MenuItem("GameObject/Voyage/Is Valid Object")]
-    public static void IsValidObject(MenuCommand menuCommand)
-    {
-        GameObject go = Selection.activeGameObject;
-        if (go == null || go.scene == null || go.scene.IsValid() == false)
-        { 
-            Debug.Log("Invalid");
-            return;
-        }
     }
 
     public static bool ShouldIgnoreGameObject(GameObject go)
@@ -377,17 +366,8 @@ public class VoyageAvatarMAEditorHelpers
                 continue;
             }
 
-            bool createAnimator = (selectedGameObject.TryGetComponent<Animator>(out Animator _) == false);
-            
-            if (createAnimator)
-            {
-                Animator animator = Undo.AddComponent<Animator>(selectedGameObject);
-                animator.runtimeAnimatorController = generatedFxController;
-            }
-
             var mergeAnimator = Undo.AddComponent<ModularAvatarMergeAnimator>(selectedGameObject);
             mergeAnimator.animator = generatedFxController;
-            mergeAnimator.deleteAttachedAnimator = createAnimator;
 
             var avatarParameters = Undo.AddComponent<ModularAvatarParameters>(selectedGameObject);
             float defaultValue = selectedGameObject.activeSelf ? 1f : 0f;

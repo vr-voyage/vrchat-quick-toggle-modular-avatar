@@ -1,7 +1,7 @@
 {
-  "name": "io.voyagevoyage.vr-voyage.quick-toggle.modular-avatar",
+  "name": "io.github.vr-voyage.quick-toggle.modular-avatar",
   "displayName": "Voyage's Quick Toggle : Modular Avatar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quickly create item toggles using Modular Avatar",
   "gitDependencies": {},
   "vpmDependencies": {
